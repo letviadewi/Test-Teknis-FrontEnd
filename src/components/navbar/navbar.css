@@ -1,0 +1,86 @@
+.navbar-container {
+  background-color: #1a202c;
+  padding: 1rem;
+}
+
+.navbar-content {
+  max-width: 960px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-brand {
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-link {
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.navbar-link:hover {
+  color: #ccc;
+}
+
+.navbar-toggle {
+  display: none;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .navbar-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar-links {
+    flex-direction: column;
+    gap: 0.5rem;
+    display: none; /* Menyembunyikan link saat diubah menjadi dropdown */
+    /* position: absolute; */
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #1a202c;
+    padding: 1rem;
+  }
+
+  .navbar-links.active {
+    display: flex; /* Menampilkan link saat dropdown aktif */
+  }
+
+  .navbar-link {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  .navbar-link:hover {
+    color: #ccc;
+  }
+
+  .navbar-toggle {
+    display: flex; /* Menjadikan elemen sejajar dengan brand */
+    align-items: center; /* Menjadikan elemen sejajar dengan brand */
+    cursor: pointer;
+    margin-left: auto; /* Menempatkan ikon di sebelah kanan */
+  }
+
+  .navbar-toggle svg {
+    margin-right: 1rem; /* Jarak antara ikon menu dan navbar-brand */
+  }
+}
