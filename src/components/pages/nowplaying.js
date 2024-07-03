@@ -17,6 +17,8 @@ const Nowplaying = () => {
 
   return (
     <div>
+      
+      <Navbar />
       <h1 style={{textAlign: 'center'}}>Now Playing Movies</h1>
       <div>
         {playingRedux.listPlaying.map((movie) => (

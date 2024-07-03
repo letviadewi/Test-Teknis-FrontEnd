@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getUpcoming } from "../../redux/actions";
 import MovieCard from "./MovieCard/movieCard";
+import Navbar from "../navbar";
 
 function UpComing() {
   const dispatch = useDispatch();
@@ -12,13 +13,14 @@ function UpComing() {
   }, [dispatch]);
   return (
     <div>
-    <h1 style={{textAlign: 'center'}}>Upcoming Movies</h1>
-    <div>
-      {upcomingRedux.listUpcoming.map((movie) => (
-        <MovieCard key={movie.id} movie={movie} />
-      ))}
+      <Navbar />
+      <h1 style={{ textAlign: "center" }}>Upcoming Movies</h1>
+      <div>
+        {upcomingRedux.listUpcoming.map((movie) => (
+          <MovieCard key={movie.id} movie={movie} />
+        ))}
+      </div>
     </div>
-  </div>
   );
 }
 

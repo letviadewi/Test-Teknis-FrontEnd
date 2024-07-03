@@ -2,6 +2,7 @@ import React, {useEffect} from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { getTopRated } from '../../redux/actions'
 import MovieCard from "./MovieCard/movieCard";
+import Navbar from '../navbar';
 
 function TopRated() {
     const dispatch = useDispatch()
@@ -12,6 +13,7 @@ function TopRated() {
     }, [dispatch])
   return (
     <div>
+      <Navbar />
     <h1 style={{textAlign: 'center'}}>Top Rated Movies</h1>
     <div>
       {topRatedRedux.listTopRated.map((movie) => (

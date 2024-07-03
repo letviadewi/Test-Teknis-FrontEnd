@@ -10,7 +10,6 @@ import Navbar from "./components/navbar";
 function App() {
   return (
     <div>
-      <Navbar />
       <Routes>
         <Route path="/" element={<Nowplaying />} />
         <Route path="/upcoming" element={<UpComing />} />

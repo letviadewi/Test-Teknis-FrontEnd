@@ -50,17 +50,14 @@
   .navbar-links {
     flex-direction: column;
     gap: 0.5rem;
-    display: none; /* Menyembunyikan link saat diubah menjadi dropdown */
-    /* position: absolute; */
-    top: 100%;
-    left: 0;
+    display: none; 
     width: 100%;
     background-color: #1a202c;
     padding: 1rem;
   }
 
   .navbar-links.active {
-    display: flex; /* Menampilkan link saat dropdown aktif */
+    display: flex; 
   }
 
   .navbar-link {
@@ -74,13 +71,13 @@
   }
 
   .navbar-toggle {
-    display: flex; /* Menjadikan elemen sejajar dengan brand */
-    align-items: center; /* Menjadikan elemen sejajar dengan brand */
+    display: flex;
+    align-items: center; 
     cursor: pointer;
-    margin-left: auto; /* Menempatkan ikon di sebelah kanan */
+    margin-left: auto;
   }
 
   .navbar-toggle svg {
-    margin-right: 1rem; /* Jarak antara ikon menu dan navbar-brand */
+    margin-right: 1rem; 
   }
 }
